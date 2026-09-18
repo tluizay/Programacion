@@ -1,7 +1,7 @@
-## Programación en lenguajes estructurados en aplicaciones de gestión
-# Parte 1
-# Parte 2
-# Parte 3 
+# Programación en lenguajes estructurados en aplicaciones de gestión
+## Parte 1
+## Parte 2
+## Parte 3 
 Consulta ORM:
 
 ```text
