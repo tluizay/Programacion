@@ -1,6 +1,8 @@
 # Programación en lenguajes estructurados en aplicaciones de gestión
 ## Parte 1
+La parte 1 esta destallada en el archivo biblioteca/CRUD-parte1.py, es un pequeño pragrama donde aplicamos la logica de python para insertar datos y mostrar datos en json
 ## Parte 2
+La interfaz web de la biblioteca, tengo varias plantillas en template/
 ## Parte 3 
 Consulta ORM:
 
@@ -26,6 +28,14 @@ Mostrar libros disponibles
 >>> print(libro)
 <QuerySet [<Libro: hola>]>
 
+
+
 ```
 
-# Parte 4 
+## Parte 4 
+En esta sección he creado el modelo Libro.
+ Comandos para las migraciones :
+ python manage.py makemigrations
+ python manage.py migrate
+
+recopilar archivos estaticos:

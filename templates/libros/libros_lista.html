@@ -23,31 +23,38 @@ Biblioteca
         </tr>
     </thead>
     <tbody>
-    {% for libro in libros %}
+        {% for libro in libros %}
         <tr>
             <td>{{ libro.titulo }}</td>
             <td>{{ libro.autor }}</td>
             <td>{{ libro.anio }}</td>
             <td>
                 {% if libro.disponible %}
-                    Sí
+                Sí
                 {% else %}
-                    No
+                No
                 {% endif %}
             </td>
             <td>
-                <a href="{% url 'eliminar_libro' libro.titulo %}" class="btn btn-sm btn-danger">
+                <a href="{% url 'eliminar_libro' libro.pk %}" class="btn btn-danger">
                     Eliminar
                 </a>
+                <a href="{% url 'editar_libro' libro.pk %}" class="btn btn-warning">
+                    editar
+                </a>
+                <a href="{% url 'detalle_libro' libro.pk %}" class="btn btn-success">
+                    Detalle
+                </a>
+
             </td>
         </tr>
-    {% empty %}
+        {% empty %}
         <tr>
             <td colspan="5" class="text-center">
                 No existen libros registrados.
             </td>
         </tr>
-    {% endfor %}
+        {% endfor %}
     </tbody>
 </table>
 
