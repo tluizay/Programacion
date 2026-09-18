@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+
+{% block titulo %}
+Detalle del libro
+{% endblock %}
+
+{% block contenido %}
+
+<div class="card shadow-sm mt-4">
+    <div class="card-body">
+        <h2 class="card-title mb-4">{{ libro.titulo }}</h2>
+
+        <ul class="list-group list-group-flush mb-4">
+            <li class="list-group-item">
+                <strong>Autor:</strong> {{ libro.autor }}
+            </li>
+            <li class="list-group-item">
+                <strong>Año de publicación:</strong> {{ libro.anio }}
+            </li>
+            <li class="list-group-item">
+                <strong>Disponibilidad:</strong> 
+                {% if libro.disponible %}
+                    <span class="badge bg-success">Disponible</span>
+                {% else %}
+                    <span class="badge bg-danger">No disponible</span>
+                {% endif %}
+            </li>
+        </ul>
+
+        <div class="d-flex gap-2">
+            <a href="{% url 'libros_lista' %}" class="btn btn-secondary">
+                Volver al listado
+            </a>
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}
