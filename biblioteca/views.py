@@ -7,7 +7,6 @@ from django.contrib import messages
 def inicio(request):
     return render(request, 'core/inicio.html')
 
-
 def listar_libros(request):
 
     libros = Libro.objects.all()
@@ -22,7 +21,6 @@ def listar_libros(request):
         "libros/libros_lista.html",
         contexto
     )
-
 
 def nuevo_libro(request):
     if request.method == "POST":
@@ -47,7 +45,6 @@ def nuevo_libro(request):
         }
     )
 
-
 def eliminar_libro(request, pk):
 
     libro = get_object_or_404(
@@ -68,7 +65,6 @@ def eliminar_libro(request, pk):
             "libro": libro
         }
     )
-
 
 def detalle_libro(request, pk): 
     libro = get_object_or_404(Libro, pk=pk)

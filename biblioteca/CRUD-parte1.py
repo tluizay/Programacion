@@ -104,4 +104,5 @@ while True:
             break
         case _:
             print("Opción no reconocida.")
-    
+
+#si estas aqui, bendiciones 
